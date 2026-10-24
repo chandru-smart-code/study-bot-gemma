@@ -1,0 +1,6 @@
+{
+  "name": "StudyGemma - AI Exam Prep & Notes Organizer",
+  "description": "ChatGPT-style study assistant powered by Gemma and Gemini to organize notes, generate exam practice questions, and quiz students with instant feedback.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

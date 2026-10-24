@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --chatgpt-bg: #ffffff;
+    --chatgpt-sidebar: #f9f9f9;
+    --chatgpt-bubble: #f4f4f4;
+    --chatgpt-border: #e5e5e5;
+    --chatgpt-text: #0d0d0d;
+    --chatgpt-subtext: #717171;
+  }
+
+  .dark {
+    --chatgpt-bg: #212121;
+    --chatgpt-sidebar: #171717;
+    --chatgpt-bubble: #2f2f2f;
+    --chatgpt-border: #2f2f2f;
+    --chatgpt-text: #ececec;
+    --chatgpt-subtext: #b4b4b4;
+  }
+
+  body {
+    background-color: var(--chatgpt-bg);
+    color: var(--chatgpt-text);
+  }
+}
+
+/* Dedicated Print Stylesheet for PDF Export */
+@media print {
+  /* Hide UI chrome */
+  aside,
+  header,
+  nav,
+  .no-print,
+  button:not(.print-show),
+  input,
+  textarea {
+    display: none !important;
+  }
+
+  body, #root, main {
+    background: #ffffff !important;
+    color: #111111 !important;
+    overflow: visible !important;
+    height: auto !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .print-area {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 24px !important;
+  }
+
+  .print-page-break {
+    page-break-after: always;
+  }
+}
